@@ -1,0 +1,57 @@
+html,body,h1,h2,h3,h4,h5,h6 {
+  font-family: "Roboto", sans-serif;  
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+
+img {
+  border: 2px solid #555 !important;
+}
+
+h1{
+  text-align: center;
+  font-size: 3.5em !important;
+}
+
+h4 {
+  text-align: center;
+}
+
+p {
+  text-align: justify;
+}
+
+table {
+  border-collapse: collapse;
+  width: auto;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+myFooter {
+  text-align: center;
+}
+
+iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Ultimate Frisbee</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-theme-l1">Home</a>
+    <a href="activities.html" class="w3-bar-item w3-button w3-hover-white">Activities</a>
+    <a href="gallery.html" class="w3-bar-item w3-button w3-hover-white">Gallery</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Menu</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#intro">Introduction</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#rule">Basic Rules</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#dev">Developments</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div  onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 200 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:200px; padding:40px">
+
+  <div class="w3-main w3-padding-32">
+	<h1 class="w3-text-teal"><b>Ultimate Frisbee</b></h1>
+  </div>
+  <hr>
+  <div id="intro" class="w3-row w3-padding-32">
+    <div class="w3-twothird w3-container">
+	  <h2 class="w3-text-teal">Introduction</h2>
+      <p>Ultimate, or more commonly known as Ultimate Frisbee, is a non-contact team sport where players make use of a flying disc for the game. Ultimate is different from other sports in the sense that it is self-refereed (in most cases), and requires players to display the 'Spirit of the Game' aka sportsmanship.
+	     The playing field for a default game of Ultimate is a rectangle (64m by 37m), with endzones (18m deep) at the two ends of the rectangles. Each team usually consists of seven players on the line for each point.</p>
+	</div>
+    <div class="w3-third w3-container">
+	  <img class="w3-image" src="frisbee1.jpg" alt="Ultimate Frisbee" width="100%" height="100%">
+    </div>
+  </div>
+  <hr>
+  <div id="rule" class="w3-container w3-padding-32">
+	  <h2 class="w3-text-teal">Basic Rules</h2>
+      <p>At the beginning of a point, both teams will line up on the front of their endzone. The team on defence will throw the disc over, and the offense will pick up the disc from where it lands and begin the game. To score, the team would need to complete a pass into the opponent’s endzone.</p>
+	  <p>Some points to note:
+	  <ul>
+		<li>Players can’t run with the disc (travel foul)</li>
+		<li>The person with the disc has ten seconds to throw the disc before the stall count is up.</li>
+		<li>When a pass is not completed (e.g. out of bounds, drop, block, interception), the possession of the disc is changed.</li>
+	  </ul>
+	  <p>You may click <a href="https://rules.wfdf.org/">here</a> to refer to the official rules given by the World Flying Disc Federation.</p>
+  </div>
+  <hr>
+  <div id="dev" class="w3-row w3-padding-32">
+	<div class="w3-twothird w3-container">
+	  <h2 class="w3-text-teal">Developments</h2>
+      <p>Ultimate has been gaining traction globally over the past decade, and has since been recognised as an official sport by the International Olympic Committee (IOC). There has also been much effort to push for Ultimate to be included as an offical sport in the 2028 Olympics Games!</p>
+	</div>
+	<div class="w3-third w3-container">
+	  <img class="w3-image" src="ioc.png" alt="International Olympic Committee" width="100%" height="100%" style="padding-top: 5%">
+    </div>
+  </div>
+  
+</div>
+
+<div class="w3-main" style="margin-left:200px">
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-16">
+      <h4><b>Ultimate Frisbee</b></h4>
+	  <p style="text-align:center">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>
